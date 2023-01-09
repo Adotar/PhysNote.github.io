@@ -1,4 +1,3 @@
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 # DFT+DMFT 简介
 
 ## 1. 为什么需要DFT+DMFT
@@ -100,3 +99,4 @@ DFT+DMFT通过对电子间强相互作用的有效近似，能够有效解决经
 [^3]: [Kristjan Haule, Turan Birol. Free Energy from Stationary Implementation of the DFT+DMFT Functional. Phys. Rev. Lett. 115, 256402 (2015).](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.115.256402) 
 [^4]: 这三种方法均为经典DFT+U这一类方法，只有赝势取值不同这一区别。
 [^5]: 黑点和白点分别为[T. Yagi](http://dx.doi.org/10.1029/JB090iB10p08784)以及[R. L. Clendenen](http://dx.doi.org/10.1063/1.1726610)的实验结果。
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
