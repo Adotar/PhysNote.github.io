@@ -1,3 +1,4 @@
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 # DFT+DMFT 简介
 
 ## 1. 为什么需要DFT+DMFT
