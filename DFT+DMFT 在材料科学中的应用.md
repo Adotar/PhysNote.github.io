@@ -44,6 +44,7 @@ $$
 \mathcal{H}_{AIM}=\mathcal{H}_{atom}+\sum_{\nu,\sigma}\epsilon^{bath}_{\nu}n^{bath}_{\nu,\sigma}+\sum_{\nu,\sigma}(V_{\nu}c^{\dagger}_{0,\sigma}a^{bath}_{\nu,\sigma}+h.c.)
 \tag{5}
 $$
+
 （5）式中， $\mathcal{H}_{atom}$ 表示与杂质格点上的原子自由度相关的能量， $\epsilon^{bath}_{\nu}$ 是无相互作用电子池的能级， $n^{bath}_{\sigma}=c^{\dagger}_{\sigma}c_{\sigma}$ 是自旋为 $\sigma$ 的电子密度 ， $V_c$ 是电子在杂质原子与无相互作用电子池之间交换的概率幅 。我们定义与频率相关的杂化函数 $\Delta(\omega)$ ：
 $$
 \Delta(\omega)=\sum_{\nu}\frac{|V_{\nu}|^2}{\omega-\epsilon^{bath}_{\nu}}
