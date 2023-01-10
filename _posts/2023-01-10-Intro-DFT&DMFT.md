@@ -54,7 +54,7 @@ V_c(\vec{r})=V(\vec{r})+\int \frac{\rho(\vec{r'})}{|\vec{r}-\vec{r'}|}d\vec{r'} 
 一维的Hubbard模型可以精确求解<sup><a href="#ref2">2</a></sup>，然而二维和三维的Hubbard模型只能通过数值方法计算。随着体系中格点数目的增加，计算量呈指数型增涨，即使如今使用超算也很难计算出结果。1992年，Georges和Kotliar两人发现Hubbard模型在无穷维极限下是精确可解的，并且将其与自洽的单格点量子杂质模型类比，为DMFT方法打下了基础<sup><a href="#ref3">3</a></sup>。DMFT关键的思想是将相互关联的多体问题转化为求解安德森杂质模型，其哈密顿量为：
 
 <p style="text-align:center">\(
-\mathcal{H}_{AIM}=\mathcal{H}_{atom}+\sum_{\nu,\sigma}\epsilon^{bath}_{\nu}n^{bath}_{\nu,\sigma}+\sum_{\nu,\sigma(V_{\nu}c^{\dagger}_{0,\sigma}a^{bath}_{\nu,\sigma}+h.c.) \tag{5}
+\mathcal{H}_{AIM}=\mathcal{H}_{atom}+\sum_{\nu,\sigma}\epsilon^{bath}_{\nu}n^{bath}_{\nu,\sigma}+\sum_{\nu,\sigma}(V_{\nu}c^{\dagger}_{0,\sigma}a^{bath}_{\nu,\sigma}+h.c.) \tag{5}
 \)</p>
 
 （5）式中，$c_{i\sigma}^{\dagger}$ 表示与杂质格点上的原子自由度相关的能量，$\epsilon_{\nu}^{bath}$ 是无相互作用电子池的能级， $n_{\sigma}^{bath}=c_{\sigma}^{\dagger}c_{\sigma}$ 是自旋为 $\sigma$ 的电子密度，$V_c$ 是电子在杂质原子与无相互作用电子池之间交换的概率幅。我们定义与频率相关的杂化函数 $\Delta(\omega)$ ：
