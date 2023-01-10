@@ -65,7 +65,7 @@ V_c(\vec{r})=V(\vec{r})+\int \frac{\rho(\vec{r'})}{|\vec{r}-\vec{r'}|}d\vec{r'}
 \end{align}
 \)</p>
 
-其中 $c^{\dagger}_{i\sigma}$ 和 $c_{i\sigma}$ 是第 $i$ 个格点上自旋为 $\sigma$ 的电子的产生和湮灭算符， $t_{ij}$ 是第 $j$ 个格点电子跃迁到第 $i$ 个格点上的格点间跃迁振幅， $U$ 是局域库伦排斥势能。如图1所示，当 $U\gg t$ 时，电子关联作用较强，原本的能带理论不再适用，可能使得按照经典方法计算出为金属的固体在依照（4）式的计算下转变成了绝缘体<sup><a href="#ref1">1</a></sup>。这种金属到绝缘体的改变，是传统的DFT无法预测出来的。
+其中 \$c^{\dagger}_{i\sigma}\$ 和 \$c_{i\sigma}\$ 是第 $i$ 个格点上自旋为 $\sigma$ 的电子的产生和湮灭算符， $t_{ij}$ 是第 $j$ 个格点电子跃迁到第 $i$ 个格点上的格点间跃迁振幅， $U$ 是局域库伦排斥势能。如图1所示，当 $U\gg t$ 时，电子关联作用较强，原本的能带理论不再适用，可能使得按照经典方法计算出为金属的固体在依照（4）式的计算下转变成了绝缘体<sup><a href="#ref1">1</a></sup>。这种金属到绝缘体的改变，是传统的DFT无法预测出来的。
 
 一维的Hubbard模型可以精确求解<sup><a href="#ref2">2</a></sup>，然而二维和三维的Hubbard模型只能通过数值方法计算。随着体系中格点数目的增加，计算量呈指数型增涨，即使如今使用超算也很难计算出结果。1992年，Georges和Kotliar两人发现Hubbard模型在无穷维极限下是精确可解的，并且将其与自洽的单格点量子杂质模型类比，为DMFT方法打下了基础<sup><a href="#ref3">3</a></sup>。DMFT关键的思想是将相互关联的多体问题转化为求解安德森杂质模型，其哈密顿量为：
 
@@ -77,7 +77,7 @@ V_c(\vec{r})=V(\vec{r})+\int \frac{\rho(\vec{r'})}{|\vec{r}-\vec{r'}|}d\vec{r'}
 \end{align}
 \)</p>
 
-（5）式中，$\mathcal{H}_{atom}$ 表示与杂质格点上的原子自由度相关的能量，$\epsilon^{bath}_{\nu}$ 是无相互作用电子池的能级， $n^{bath}_{\sigma}=c^{\dagger}_{\sigma}c_{\sigma}$ 是自旋为 $\sigma$ 的电子密度，$V_c$ 是电子在杂质原子与无相互作用电子池之间交换的概率幅。我们定义与频率相关的杂化函数 $\Delta(\omega)$ ：
+（5）式中，$c^{\dagger}_{i\sigma}$ 表示与杂质格点上的原子自由度相关的能量，$\epsilon^{bath}_{\nu}$ 是无相互作用电子池的能级， $n^{bath}_{\sigma}=c^{\dagger}_{\sigma}c_{\sigma}$ 是自旋为 $\sigma$ 的电子密度，$V_c$ 是电子在杂质原子与无相互作用电子池之间交换的概率幅。我们定义与频率相关的杂化函数 $\Delta(\omega)$ ：
 
 <p style="text-align:center">\(<br>
 \begin{align}
