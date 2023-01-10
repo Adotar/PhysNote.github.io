@@ -95,14 +95,9 @@ V_c(\vec{r})=V(\vec{r})+\int \frac{\rho(\vec{r'})}{|\vec{r}-\vec{r'}|}d\vec{r'}
 
 （6）式中的杂化函数 $\Delta(\omega)$ 决定了电子在杂质格点和无相互作用电子池之间跃迁的能力。理论上， $\Delta(\omega)$ 越大，电子越被整个体系共享； $\Delta(\omega)$ 越小，电子运动越是局域。与DFT相比，DFT通过LDA（局域密度近似）或者GGA（广义梯度近似）[^1]等方法方法近似交换关联函数 $V_{xc}$ ，而DMFT是通过计算 $\Delta(\omega)$ 来表征强关联体系的相互作用强度。
 
-  <center>
-    <img src="https://raw.githubusercontent.com/Adotar/Note/main/Band-diagram-of-Mott-Hubbard-Insulator-reproduced-from-Ref67.jpg?token=A5EYVQCGDRSMUY55775RJ43DXPVTU"
-       style="zoom:50%;" />
-    <br>
-    <table>
-      图1 Hubbard带的形成原理
-    </table>
-  </center>
+<center><img src='./assets/img/posts/20230110/Band-diagram-of-Mott-Hubbard-Insulator-reproduced-from-Ref67.jpg' style='zoom:50%;'/></center>
+<center><table>图1 Hubbard带的形成原理</table></center>
+
 
 ### 2.3 DFT+DMFT
 
