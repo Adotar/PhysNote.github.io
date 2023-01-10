@@ -96,7 +96,7 @@ $$
 
 ## 3. 应用
 
-Kristjan Haule和Turan Birol使用DFT+DMFT方法计算了莫特绝缘体相变金属氧化物FeO的自由能与晶胞体积，以及内能与晶胞体积的关系[^3]。如图3（a）所示，300K时，通过自由能F和内能E计算的FeO平衡晶格体积分别为20.24 $\AA^3$ 和20.28 $\AA^3$ ，相较于实验测量的20.342 $\AA^3$ 分别小了0.16%和0.10%。本次通过DFT+DMFT计算的结果相比于之前使用经典DFT的计算结果精确度有很大提升，例如：PBE-sol相较于实验值小5.2%，PBE为5.0%，LDA为7.7%[^4]。图3（b）中，展示了FeO在300K时不同压强下的晶胞体积，可见其数值计算结果与实验值极为吻合[^5]。
+Kristjan Haule和Turan Birol使用DFT+DMFT方法计算了莫特绝缘体相变金属氧化物FeO的自由能与晶胞体积，以及内能与晶胞体积的关系[^3]。如图3（a）所示，300K时，通过自由能F和内能E计算的FeO平衡晶格体积分别为20.24 Å 和20.28 Å ，相较于实验测量的20.342 Å 分别小了0.16%和0.10%。本次通过DFT+DMFT计算的结果相比于之前使用经典DFT的计算结果精确度有很大提升，例如：PBE-sol相较于实验值小5.2%，PBE为5.0%，LDA为7.7%[^4]。图3（b）中，展示了FeO在300K时不同压强下的晶胞体积，可见其数值计算结果与实验值极为吻合[^5]。
 
 <center>
   <img src="https://raw.githubusercontent.com/Adotar/Note/main/91EFA3B0BFB4DE5EB560BBE2C90DA02C.png?token=A5EYVQGUVQ7AQ5NSSKKY3V3DXPVW6" style="zoom:40%;" />
