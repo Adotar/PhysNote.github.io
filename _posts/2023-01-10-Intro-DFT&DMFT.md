@@ -30,11 +30,11 @@ V_c(\vec{r})=V(\vec{r})+\int \frac{\rho(\vec{r'})}{|\vec{r}-\vec{r'}|}d\vec{r'} 
 （1）式中 $V(\vec{r})$ 是离子势能函数，等式右边第二项为体系所有电子在空间 $\vec{r}$ 位置产生的总势能。除此之外，DFT还定义了交换关联函数 $V_{xc}$ ，并且列出了电子密度为目标解的自洽方程：
 
 <p style="text-align:center">\(
-\bigg[-\frac{1}{2}\nabla^2+V_c(\vec{r})+V_{xc}(\vec{r})-E_i\bigg]\psi_i(\vec{r})=0
+\bigg[-\frac{1}{2}\nabla^2+V_c(\vec{r})+V_{xc}(\vec{r})-E_i\bigg]\psi_i(\vec{r})=0 \tag{2}
 \)</p>
 
 <p style="text-align:center">\(
-\rho(\vec{r})=\sum_i|\psi_i(\vec{r})|^2
+\rho(\vec{r})=\sum_i|\psi_i(\vec{r})|^2 \tag{3}
 \)</p>
 
 这里的 $\psi_i$ 是无相互作用的科恩-沈吕九（KS）波函数。通过设置一个初始电子密度 $ \rho(\vec{r}) $ 代入（1）式，计算出初始的有效库伦势 $V_c(\vec{r})$ ，再代入（2）式计算出科恩-沈吕九准粒子的本征波函数 $\psi_i$ ，最后通过（3）式对其所有本征态求和，从而计算出第一次迭代解出的新的电子密度 $ \rho(\vec{r}) $ 。然后将其再次代入（1）式，进入第二次的迭代，依次循环，进行多次迭代。然而（2）式中的交换关联函数 $V_{xc}$ 是未知的。 $V_{xc}$ 的值取决于整个空间的电子密度分布，通常我们将其近似为只与 $\vec{r}$ 位置的电子密度相关的函数。虽然在弱相互作用体系中， $V_{xc}$ 相比于 $ V_c(\vec{r}) $ 的值要小很多，但是在强关联体系下，我们对 $V_{xc}$ 的近似会在迭代过程中带来极大的误差，甚至会出现物理上的错误。
@@ -46,7 +46,7 @@ V_c(\vec{r})=V(\vec{r})+\int \frac{\rho(\vec{r'})}{|\vec{r}-\vec{r'}|}d\vec{r'} 
 早期人们理解强关联体系主要通过Hubbard模型，此模型的哈密顿量如（4）式所示，由格点间电子跃迁项和同一格点自旋相反的电子库伦排斥项组成：
 
 <p style="text-align:center">\(
-\hat{H}=\sum_{ij,\sigma}t_{ij}c^{\dagger}_{i\sigma}c_{j\sigma}+U\sum_in_{i\uparrow}n_{i\downarrow}
+\hat{H}=\sum_{ij,\sigma}t_{ij}c^{\dagger}_{i\sigma}c_{j\sigma}+U\sum_in_{i\uparrow}n_{i\downarrow} \tag{4}
 \)</p>
 
 其中 $c_{i\sigma}^{\dagger}$ 和 \$c_{i\sigma}\$ 是第 $i$ 个格点上自旋为 $\sigma$ 的电子的产生和湮灭算符， $t_{ij}$ 是第 $j$ 个格点电子跃迁到第 $i$ 个格点上的格点间跃迁振幅，$U$ 是局域库伦排斥势能。如图1所示，当 $U\gg t$ 时，电子关联作用较强，原本的能带理论不再适用，可能使得按照经典方法计算出为金属的固体在依照（4）式的计算下转变成了绝缘体<sup><a href="#ref1">1</a></sup>。这种金属到绝缘体的改变，是传统的DFT无法预测出来的。
@@ -54,13 +54,13 @@ V_c(\vec{r})=V(\vec{r})+\int \frac{\rho(\vec{r'})}{|\vec{r}-\vec{r'}|}d\vec{r'} 
 一维的Hubbard模型可以精确求解<sup><a href="#ref2">2</a></sup>，然而二维和三维的Hubbard模型只能通过数值方法计算。随着体系中格点数目的增加，计算量呈指数型增涨，即使如今使用超算也很难计算出结果。1992年，Georges和Kotliar两人发现Hubbard模型在无穷维极限下是精确可解的，并且将其与自洽的单格点量子杂质模型类比，为DMFT方法打下了基础<sup><a href="#ref3">3</a></sup>。DMFT关键的思想是将相互关联的多体问题转化为求解安德森杂质模型，其哈密顿量为：
 
 <p style="text-align:center">\(
-\mathcal{H}_{AIM}=\mathcal{H}_{atom}+\sum_{\nu,\sigma}\epsilon^{bath}_{\nu}n^{bath}_{\nu,\sigma}+\sum_{\nu,\sigma}(V_{\nu}c^{\dagger}_{0,\sigma}a^{bath}_{\nu,\sigma}+h.c.)
+\mathcal{H}_{AIM}=\mathcal{H}_{atom}+\sum_{\nu,\sigma}\epsilon^{bath}_{\nu}n^{bath}_{\nu,\sigma}+\sum_{\nu,\sigma(V_{\nu}c^{\dagger}_{0,\sigma}a^{bath}_{\nu,\sigma}+h.c.) \tag{5}
 \)</p>
 
 （5）式中，$c_{i\sigma}^{\dagger}$ 表示与杂质格点上的原子自由度相关的能量，$\epsilon_{\nu}^{bath}$ 是无相互作用电子池的能级， $n_{\sigma}^{bath}=c_{\sigma}^{\dagger}c_{\sigma}$ 是自旋为 $\sigma$ 的电子密度，$V_c$ 是电子在杂质原子与无相互作用电子池之间交换的概率幅。我们定义与频率相关的杂化函数 $\Delta(\omega)$ ：
 
 <p style="text-align:center">\(
-\Delta(\omega)=\sum_{\nu}\frac{|V_{\nu}|^2}{\omega-\epsilon^{bath}_{\nu}}
+\Delta(\omega)=\sum_{\nu}\frac{|V_{\nu}|^2}{\omega-\epsilon^{bath}_{\nu}} \tag{6}
 \)</p>
 
 （6）式中的杂化函数 $\Delta(\omega)$ 决定了电子在杂质格点和无相互作用电子池之间跃迁的能力。理论上， $\Delta(\omega)$ 越大，电子越被整个体系共享； $\Delta(\omega)$ 越小，电子运动越是局域。与DFT相比，DFT通过LDA（局域密度近似）或者GGA（广义梯度近似）[^1]等方法方法近似交换关联函数 $V_{xc}$ ，而DMFT是通过计算 $\Delta(\omega)$ 来表征强关联体系的相互作用强度。
