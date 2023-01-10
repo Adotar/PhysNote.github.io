@@ -27,7 +27,6 @@ DFT+DMFT（动力学平均场理论）是一个用来计算强关联体系的有
 \begin{align}
 \begin{split}
 V_c(\vec{r})=V(\vec{r})+\int \frac{\rho(\vec{r'})}{|\vec{r}-\vec{r'}|}d\vec{r'}
-\tag{1}
 \end{split}
 \end{align}
 \)</p>
@@ -38,7 +37,6 @@ V_c(\vec{r})=V(\vec{r})+\int \frac{\rho(\vec{r'})}{|\vec{r}-\vec{r'}|}d\vec{r'}
 \begin{align}
 \begin{split}
 \bigg[-\frac{1}{2}\nabla^2+V_c(\vec{r})+V_{xc}(\vec{r})-E_i\bigg]\psi_i(\vec{r})=0
-\tag{2}
 \end{split}
 \end{align}
 \)</p>
@@ -47,7 +45,6 @@ V_c(\vec{r})=V(\vec{r})+\int \frac{\rho(\vec{r'})}{|\vec{r}-\vec{r'}|}d\vec{r'}
 \begin{align}<br>
 \begin{split}<br>
 \rho(\vec{r})=\sum_i|\psi_i(\vec{r})|^2
-\tag{3}
 \end{split}<br>
 \end{align}<br>
 \)</p>
@@ -64,7 +61,6 @@ V_c(\vec{r})=V(\vec{r})+\int \frac{\rho(\vec{r'})}{|\vec{r}-\vec{r'}|}d\vec{r'}
 \begin{align}
 \begin{split}
 \hat{H}=\sum_{ij,\sigma}t_{ij}c^{\dagger}_{i\sigma}c_{j\sigma}+U\sum_in_{i\uparrow}n_{i\downarrow}
-\tag{4}
 \end{split}
 \end{align}
 \)</p>
@@ -77,7 +73,6 @@ V_c(\vec{r})=V(\vec{r})+\int \frac{\rho(\vec{r'})}{|\vec{r}-\vec{r'}|}d\vec{r'}
 \begin{align}
 \begin{split}
 \mathcal{H}_{AIM}=\mathcal{H}_{atom}+\sum_{\nu,\sigma}\epsilon^{bath}_{\nu}n^{bath}_{\nu,\sigma}+\sum_{\nu,\sigma}(V_{\nu}c^{\dagger}_{0,\sigma}a^{bath}_{\nu,\sigma}+h.c.)
-\tag{5}
 \end{split}
 \end{align}
 \)</p>
@@ -88,7 +83,6 @@ V_c(\vec{r})=V(\vec{r})+\int \frac{\rho(\vec{r'})}{|\vec{r}-\vec{r'}|}d\vec{r'}
 \begin{align}
 \begin{split}
 \Delta(\omega)=\sum_{\nu}\frac{|V_{\nu}|^2}{\omega-\epsilon^{bath}_{\nu}}
-\tag{6}
 \end{split}
 \end{align}
 \)</p>
@@ -103,28 +97,16 @@ V_c(\vec{r})=V(\vec{r})+\int \frac{\rho(\vec{r'})}{|\vec{r}-\vec{r'}|}d\vec{r'}
 
 尽管DMFT在计算强关联体系时，相较于DFT有较强的优势，但是它并不能直接用于计算真实材料。为了计算真实材料，我们需要将DMFT与类似于DFT等第一性原理计算方法连接连接起来，因此而诞生了DFT+DMFT计算方法。如图2所示，DFT+DMFT迭代除了履行经典的DFT迭代外，还增加了计算格林函数 $G(\omega,\vec{r},\vec{r}')$ ，杂化函数 $\Delta(\omega)$ ，自能 $\sum(\omega)$ 的迭代[^2]。在每一次的DFT迭代后，将计算出的KS波函数作为DMFT的输入，计算得到初始 $G(\omega,\vec{r},\vec{r}')$ ，然后实行图2中的绿色迭代部分，等待迭代自洽后，将得到的末态 $G(\omega,\vec{r},\vec{r}')$ 作为DFT下一次迭代中计算电子密度 $\rho(\vec{r})$ 的输入。
 
-<center>
-  <img src="https://raw.githubusercontent.com/Adotar/Note/main/DFT%2BDMFT loop.png?token=A5EYVQGDCYJJCGLGBDQ3W5LDXPVDS" />
-  <br>
-  <table>
-    图2 DFT+DMFT迭代
-  </table>
-</center>
+<center><img src='./assets/img/posts/20230110/DFT%2BDMFT%20loop.png'/></center>
+<center><table>图2 DFT+DMFT迭代</table></center>
 
 
 ## 3. 应用
 
 Kristjan Haule和Turan Birol使用DFT+DMFT方法计算了莫特绝缘体相变金属氧化物FeO的自由能与晶胞体积，以及内能与晶胞体积的关系[^3]。如图3（a）所示，300K时，通过自由能F和内能E计算的FeO平衡晶格体积分别为20.24 Å 和20.28 Å ，相较于实验测量的20.342 Å 分别小了0.16%和0.10%。本次通过DFT+DMFT计算的结果相比于之前使用经典DFT的计算结果精确度有很大提升，例如：PBE-sol相较于实验值小5.2%，PBE为5.0%，LDA为7.7%[^4]。图3（b）中，展示了FeO在300K时不同压强下的晶胞体积，可见其数值计算结果与实验值极为吻合[^5]。
 
-<center>
-  <img src="https://raw.githubusercontent.com/Adotar/Note/main/91EFA3B0BFB4DE5EB560BBE2C90DA02C.png?token=A5EYVQGUVQ7AQ5NSSKKY3V3DXPVW6" style="zoom:40%;" />
-  <br>
-  <table>
-    图3 （a）300K，DFT+DMFT计算FeO自由能和内能与晶胞体积的关系；
-    <br>
-    （b）300K，FeO晶胞体积和压强的关系。
-  </table>
-</center>
+<center><img src='./assets/img/posts/20230110/post1.png' style="zoom:40%;" /></center>
+<center><table>图3 （a）300K，DFT+DMFT计算FeO自由能和内能与晶胞体积的关系；<br>（b）300K，FeO晶胞体积和压强的关系。</table></center>
 
 
 ## 4. 科学创新的结论
