@@ -8,6 +8,7 @@ img: posts/20210420/post8-rembrandt.jpg
 tags: [凝聚态物理, DFT, DMFT]
 category: opinion
 author: Adotar
+mathjax: yes
 description: "在凝聚态物理中，我们经常使用DFT（密度泛函理论）进行第一性原理计算，从而预测物质性质。然而，在具有电子强相互作用的体系中，DFT并不能完全计算出体系的所有性质。因此我们需要新的方法来计算并预测强关联体系的物理性质。"
 ---
 ## 1. 为什么需要DFT+DMFT
