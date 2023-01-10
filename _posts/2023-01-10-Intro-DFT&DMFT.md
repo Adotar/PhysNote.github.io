@@ -34,7 +34,9 @@ $$
 $$
 \bigg[-\frac{1}{2}\nabla^2+V_c(\vec{r})+V_{xc}(\vec{r})-E_i\bigg]\psi_i(\vec{r})=0
 \tag{2}
-<br>
+$$
+
+$$
 \rho(\vec{r})=\sum_i|\psi_i(\vec{r})|^2
 \tag{3}
 $$
