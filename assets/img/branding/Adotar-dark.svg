@@ -1,12 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg viewBox="145.166 77.254 164.667 69.184" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <defs>
-    <pattern x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse" viewBox="0 0 100 100" id="pattern-0">
-      <rect x="0" y="0" width="50" height="100" style="fill: black;"/>
-    </pattern>
-    <pattern id="pattern-0-0" patternTransform="matrix(-0.176942, 0.000032, 0.000287, 0.641965, 241.179045, 102.950346)" xlink:href="#pattern-0"/>
-  </defs>
-  <text style="fill: rgb(255, 255, 255); font-family: Arial, sans-serif; font-size: 16.7px; font-weight: 700; white-space: pre;" x="167.776" y="118.118">Adotar's Blog</text>
-  <ellipse style="fill: rgba(216, 216, 216, 0); paint-order: fill; stroke-width: 3px; stroke: rgb(1, 115, 197); stroke-linecap: round; stroke-opacity: 0.5; pointer-events: none;" cx="174.094" cy="110.716" rx="25.695" ry="25.334"/>
-  <ellipse style="fill: rgba(216, 216, 216, 0); stroke: url(#pattern-0-0); stroke-width: 6px; stroke-opacity: 0.5; pointer-events: none;" cx="239.452" cy="112.148" rx="62.482" ry="29.643"/>
+<svg viewBox="164.197 102.676 116.695 22.142" xmlns="http://www.w3.org/2000/svg">
+  <text style="fill: rgb(101, 168, 171); font-family: Arial, sans-serif; font-size: 16.7px; font-weight: 700; white-space: pre;" x="167.776" y="118.118">Adotar's Blog</text>
 </svg>
