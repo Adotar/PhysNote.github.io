@@ -19,9 +19,7 @@ The physical difinition of propagator is : propagator is the probability of one 
 
 The propagator can be difined in real-space / time representation as :
 
-<p style="text-align:center">\(
-G(x,t;x',t')=-i\bra{x}U(t,t')\ket{x'}=-i\delta_{x,x'}=-i\sqrt{\frac{m}{2\pi i\Delta t}}e^{i\frac{m(x-x')^2}{2\Delta t}}\ ,\ \Delta t=t-t'
-\)</p>
+$$ G(x,t;x',t')=-i\bra{x}U(t,t')\ket{x'}=-i\delta_{x,x'}=-i\sqrt{\frac{m}{2\pi i\Delta t}}e^{i\frac{m(x-x')^2}{2\Delta t}}\ ,\ \Delta t=t-t' $$
 
 with $U(t,t')=e^{-iH(t-t')}$ is the time evolution operator in real-space. The third equation is true only when we are considering free particle ( $H=\frac{p^2}{2m}$) in real-space representation.
 
@@ -31,23 +29,17 @@ We consider a particle in energy-space : $H\ket{n}=\epsilon_n\ket{n}$
 
 Then we can define the propagator in energy / time representation :
 
-<p style="text-align:center">\(
-G(n,t;n',t')=-i\bra{n}U(t,t')\ket{n'}=-ie^{-i\epsilon_n(t-t')}\delta_{n,n'}
-\)</p>
+$$ G(n,t;n',t')=-i\bra{n}U(t,t')\ket{n'}=-ie^{-i\epsilon_n(t-t')}\delta_{n,n'} $$
 
 Transfer from time-space to frequency-space ( fourier transformation ) :
 
-<p style="text-align:center">\(
-G(n,n';\omega)=\frac{1}{\omega-\epsilon_n+i0^+}\delta_{n,n'}
-\)</p>
+$$ G(n,n';\omega)=\frac{1}{\omega-\epsilon_n+i0^+}\delta_{n,n'} $$
 
 It's easily to find that there's a pole when $\omega=\epsilon_n-i0^+$ , and we use $0^+$ to converge the integral of fourier transformation. 
 
 We need to emphasize that pole has to be considered when we transfer from frequency-space to time-space doing the inverse fourier transformation :
 
-<p style="text-align:center">\(
-G(n,n';\Delta t)=\frac{1}{2\pi}\int G(n,n';\omega)e^{-i\omega t}d\omega=\frac{1}{2\pi}\int \frac{\delta_{n,n'}}{\omega-\epsilon_n+i0^+}e^{-i\omega t}d\omega=-ie^{-i\epsilon_nt}
-\)</p>
+$$ G(n,n';\Delta t)=\frac{1}{2\pi}\int G(n,n';\omega)e^{-i\omega t}d\omega=\frac{1}{2\pi}\int \frac{\delta_{n,n'}}{\omega-\epsilon_n+i0^+}e^{-i\omega t}d\omega=-ie^{-i\epsilon_nt} $$
 
 To solve this integral ( Cathy integral ) , we will use the residual concentration .
 
@@ -57,18 +49,13 @@ To solve this integral ( Cathy integral ) , we will use the residual concentrati
 
 I'm trying to provide a physical insight of the method of path integral . Considering an event that a particle traveling from $(x_a,t_a)$ to $(x_b,t_b)$ , the probability of which can be calculated according to the difinition of function $iG(x_b,t_b;x_a,t_a)$ . There are many paths that the particle can choose to travel along , we can imagine one of the paths going through the $(x,t)$ . It easily to calculate the probability as :
 
-<p style="text-align:center">\(
-P_{x_a\rightarrow x\rightarrow x_b}=P_{x_a\rightarrow x}\times P_{x\rightarrow x_b}
-\)</p>
+$$ P_{x_a\rightarrow x\rightarrow x_b}=P_{x_a\rightarrow x}\times P_{x\rightarrow x_b} $$
 
 With the subscript means the path .
 
 Meanwhile , there is not only one path the particle can choose . So , the real probability of it traveling from $(x_a,t_a)$ to $(x_b,t_b)$ need to consider all of the paths , which means we have to do an integral :
 
-<p style="text-align:center">\(
-iG(x_b,t_b;x_a,t_a)=P_{x_a\rightarrow x_b}=\int P_{x_a\rightarrow x\rightarrow x_b}dx=\int P_{x_a\rightarrow x}\times P_{x\rightarrow x_b}dx=\int iG(x_b,t_b;x,t)\cdot iG(x,t;x_a,t_a)dx
-\)</p>
-
+$$ iG(x_b,t_b;x_a,t_a)=P_{x_a\rightarrow x_b}=\int P_{x_a\rightarrow x\rightarrow x_b}dx=\int P_{x_a\rightarrow x}\times P_{x\rightarrow x_b}dx=\int iG(x_b,t_b;x,t)\cdot iG(x,t;x_a,t_a)dx $$
 This is the core idea of the path integral .
 
 #### 3.2 Propagator in path integral representation
@@ -81,9 +68,7 @@ There are 3 mean steps when we express the propagator in path integral represent
 
 (3) Express the propagator in the form of action quantity
 
-<p style="text-align:center">\(
-iG(x_b,t_b;x_a,t_a)&=\int iG(x_b,t_b;x_{N-1},t_{N-1})\cdot iG(x_{N-1},t_{N-1};x_{N-2},t_{N-2})\cdots iG(x_1,t_1;x_a,t_a)dx_1dx_2\cdots dx_N\\
-\xlongequal[x_a=x_0]{x_b=x_N} \int \prod_{j=1}^NiG(x_j,t_j;x_{j-1},t_{j-1})dx_1dx_2\cdots dx_N\ \cdots(1)\\
-\xlongequal[H=\frac{p^2}{2m},N\rightarrow \infty]{Free\ Particle}(\frac{m}{2\pi i\Delta t})^{\frac{N}{2}}\int \prod_{j=1}^Ne^{i\frac{m}{2}(\frac{x_j-x_{j-1}}{\Delta t})^2\Delta t}dx_1dx_2\cdots dx_N\ \cdots(2)\\
-=\sqrt{\frac{m}{2\pi i(t_b-t_a)}}e^{i\frac{m}{2N}\frac{(x_b-x_a)^2}{t_b-t_a}}\ \cdots(3)
-\)</p>
+$$ iG(x_b,t_b;x_a,t_a)&=\int iG(x_b,t_b;x_{N-1},t_{N-1})\cdot iG(x_{N-1},t_{N-1};x_{N-2},t_{N-2})\cdots iG(x_1,t_1;x_a,t_a)dx_1dx_2\cdots dx_N \\\\
+\xlongequal[x_a=x_0]{x_b=x_N} \int \prod_{j=1}^NiG(x_j,t_j;x_{j-1},t_{j-1})dx_1dx_2\cdots dx_N\ \cdots(1) \\\\
+\xlongequal[H=\frac{p^2}{2m},N\rightarrow \infty]{Free\ Particle}(\frac{m}{2\pi i\Delta t})^{\frac{N}{2}}\int \prod_{j=1}^Ne^{i\frac{m}{2}(\frac{x_j-x_{j-1}}{\Delta t})^2\Delta t}dx_1dx_2\cdots dx_N\ \cdots(2) \\\\
+=\sqrt{\frac{m}{2\pi i(t_b-t_a)}}e^{i\frac{m}{2N}\frac{(x_b-x_a)^2}{t_b-t_a}}\ \cdots(3) $$
