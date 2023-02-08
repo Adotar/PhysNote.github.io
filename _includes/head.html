@@ -65,19 +65,5 @@
 	{% if page.layout == 'post' %}
 	<link rel="stylesheet" href="{{ relativebase }}assets/css/highlighter/{{ site.highlight_theme }}.css">
 	{% endif %}
-	
-	<script type="text/javascript">
-	window.MathJax = {
-		loader: {
-			load: ['[tex]/braket','[tex]/extpfeil']
-		},
-		tex: {
-			packages: {'[+]': ['braket','extpfeil']},
-			inlineMath: [['$','$']]
-		}
-	};
-        </script>
-        <script type="text/javascript" id="MathJax-script" async
-		src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-	</script>
+{% include mathjax.html >}}
 </head>
