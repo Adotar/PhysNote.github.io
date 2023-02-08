@@ -7,6 +7,14 @@ MathJax = {
     fontCache: 'global'
   }
 };
+window.MathJax = {
+	loader: {
+		load: ['[tex]/braket','[tex]/extpfeil']
+	},
+	tex: {
+    packages: {'[+]': ['braket','extpfeil']}
+	}
+};
 </script>
 <script
   type="text/javascript" id="MathJax-script" async
