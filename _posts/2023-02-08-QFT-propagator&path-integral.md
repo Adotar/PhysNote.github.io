@@ -2,7 +2,7 @@
 layout: post
 read_time: true
 show_date: true
-title: "QFT in Condensed Matter Physics : Propagator and Path Integral"
+title: "QFT in Condensed Matter Physics (1)"
 date: 2023-02-08
 img: posts/20230208/richardfeynman.jpg
 tags: [凝聚态物理, QFT, propagator, path integral]
@@ -11,11 +11,11 @@ author: Adotar
 mathjax: yes
 description: "The method of path integral is one of the most important approaches in modern physics. Using the concept of propagator can help us understand the core idea of this method. Here I just want to take some notes while I'm learn the QFT in condensed matter physics."
 ---
-## Propagator in 3 kinds of representations
+# Propagator and Path Integral
 
 The physical difinition of propagator is : propagator is the probability of one particle evolute from one state to another state within a period of time .
 
-### 1. Real-space / time representation
+## 1. Real-space / time representation
 
 The propagator can be difined in real-space / time representation as :
 
@@ -28,7 +28,7 @@ G(x,t;x',t')=-i\langle x|U(t,t')|x'\rangle =-i\delta_{x,x'}=-i\sqrt{\frac{m}{2\p
 
 with $U(t,t')=e^{-iH(t-t')}$ is the time evolution operator in real-space. The third equation is true only when we are considering free particle ( $H=\frac{p^2}{2m}$) in real-space representation.
 
-### 2. Energy / frequency representation
+## 2. Energy / frequency representation
 
 We consider a particle in energy-space : 
 
@@ -62,11 +62,11 @@ G(n,n';\Delta t)&=\frac{1}{2\pi}\int G(n,n';\omega)e^{-i\omega t}d\omega\\\\
 
 To solve this integral ( Cathy integral ) , we will use the residual concentration .
 
-### 3. Path integral representation
+## 3. Path integral representation
 
-#### 3.1 Path integral
+### 3.1 Path integral
 
-I'm trying to provide a physical insight of the method of path integral . Considering an event that a particle traveling from $(x_a,t_a)$ to $(x_b,t_b)$ , the probability of which can be calculated according to the difinition of function $iG(x_b,t_b;x_a,t_a)$ . There are many paths that the particle can choose to travel along , we can imagine one of the paths going through the $(x,t)$ . It easily to calculate the probability as :
+I'm trying to provide a physical insight of the method of path integral . Imagining an event that a particle traveling from $(x_a,t_a)$ to $(x_b,t_b)$ , the probability of which can be calculated according to the difinition of function $iG(x_b,t_b;x_a,t_a)$ . There are many paths that the particle can choose to travel along , we can imagine one of the paths going through the $(x,t)$ . It is easily to calculate the probability as :
 
 <p style="text-align:center">\(
 P_{x_a\rightarrow x\rightarrow x_b}=P_{x_a\rightarrow x}\times P_{x\rightarrow x_b}
@@ -85,7 +85,7 @@ iG(x_b,t_b;x_a,t_a)&=P_{x_a\rightarrow x_b}=\int P_{x_a\rightarrow x\rightarrow 
 
 This is the core idea of the path integral .
 
-#### 3.2 Propagator in path integral representation
+### 3.2 Propagator in path integral representation
 
 There are 3 mean steps when we express the propagator in path integral representation :
 
