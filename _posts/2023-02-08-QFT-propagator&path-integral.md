@@ -4,7 +4,7 @@ read_time: true
 show_date: true
 title: "QFT in Condensed Matter Physics : Propagator and Path Integral"
 date: 2023-02-08
-img: posts/20210420/post8-rembrandt.jpg
+img: posts/20230208/richardfeynman.jpg
 tags: [凝聚态物理, QFT, propagator, path integral]
 category: opinion
 author: Adotar
