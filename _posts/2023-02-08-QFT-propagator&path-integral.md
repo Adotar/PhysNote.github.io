@@ -20,7 +20,7 @@ The physical difinition of propagator is : propagator is the probability of one 
 The propagator can be difined in real-space / time representation as :
 
 <p style="text-align:center">\(
-G(x,t;x',t')=-i\langle x|U(t,t')|x'\rangle =-i\delta_{x,x'}=-i\sqrt{\frac{m}{2\pi i\Delta t}}e^{i\frac{m(x-x')^2}{2\Delta t}}\\\\
+G(x,t;x',t')=-i\langle x|U(t,t')|x'\rangle =-i\delta_{x,x'}=-i\sqrt{\frac{m}{2\pi i\Delta t}}e^{i\frac{m(x-x')^2}{2\Delta t}} <br/>
 \Delta t=t-t'
 \)</p>
 
@@ -71,8 +71,10 @@ With the subscript means the path .
 Meanwhile , there is not only one path the particle can choose . So , the real probability of it traveling from $(x_a,t_a)$ to $(x_b,t_b)$ need to consider all of the paths , which means we have to do an integral :
 
 <p style="text-align:center">\(
+\begin{aligned}
 iG(x_b,t_b;x_a,t_a)&=P_{x_a\rightarrow x_b}=\int P_{x_a\rightarrow x\rightarrow x_b}dx=\int P_{x_a\rightarrow x}\times P_{x\rightarrow x_b}dx\\\\
-=\int iG(x_b,t_b;x,t)\cdot iG(x,t;x_a,t_a)dx
+&=\int iG(x_b,t_b;x,t)\cdot iG(x,t;x_a,t_a)dx
+\end{aligned}
 \)</p>
 
 This is the core idea of the path integral .
