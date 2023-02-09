@@ -20,10 +20,10 @@ The physical difinition of propagator is : propagator is the probability of one 
 The propagator can be difined in real-space / time representation as :
 
 <p style="text-align:center">\(
-\begin{aligned}
-G(x,t;x',t')=-i\langle x|U(t,t')|x'\rangle =-i\delta_{x,x'}=-i\sqrt{\frac{m}{2\pi i\Delta t}}e^{i\frac{m(x-x')^2}{2\Delta t}}\\\\
+G(x,t;x',t')=-i\langle x|U(t,t')|x'\rangle =-i\delta_{x,x'}=-i\sqrt{\frac{m}{2\pi i\Delta t}}e^{i\frac{m(x-x')^2}{2\Delta t}}
+\)</p>
+<p style="text-align:center">\(
 \Delta t=t-t'
-\end{aligned}
 \)</p>
 
 with $U(t,t')=e^{-iH(t-t')}$ is the time evolution operator in real-space. The third equation is true only when we are considering free particle ( $H=\frac{p^2}{2m}$) in real-space representation.
@@ -97,7 +97,7 @@ There are 3 mean steps when we express the propagator in path integral represent
 
 <p style="text-align:center">\(
 \begin{aligned}
-iG(x_b,t_b;x_a,t_a)&=\int iG(x_b,t_b;x_{N-1},t_{N-1})\cdot iG(x_{N-1},t_{N-1};x_{N-2},t_{N-2})\\\\
+&iG(x_b,t_b;x_a,t_a)=\int iG(x_b,t_b;x_{N-1},t_{N-1})\cdot iG(x_{N-1},t_{N-1};x_{N-2},t_{N-2})\\\\
 &\cdots iG(x_1,t_1;x_a,t_a)dx_1dx_2\cdots dx_N\\\\
 &\xlongequal[x_a=x_0]{x_b=x_N} \int \prod_{j=1}^NiG(x_j,t_j;x_{j-1},t_{j-1})dx_1dx_2\cdots dx_N\ \cdots(1)\\\\
 &\xlongequal[H=\frac{p^2}{2m},N\rightarrow \infty]{Free\ Particle}(\frac{m}{2\pi i\Delta t})^{\frac{N}{2}}\int \prod_{j=1}^Ne^{i\frac{m}{2}(\frac{x_j-x_{j-1}}{\Delta t})^2\Delta t}dx_1dx_2\cdots dx_N\ \cdots(2)\\\\
