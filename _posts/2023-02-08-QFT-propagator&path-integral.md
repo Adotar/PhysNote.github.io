@@ -90,10 +90,10 @@ $$
 \begin{equation}
 \begin{split}
 iG(x_b,t_b;x_a,t_a)=\int iG(x_b,t_b;x_{N-1},t_{N-1})\cdot iG(x_{N-1},t_{N-1};x_{N-2},t_{N-2})\\\\
-$\cdots iG(x_1,t_1;x_a,t_a)dx_1dx_2\cdots dx_N\\\\
-$\xlongequal[x_a=x_0]{x_b=x_N} \int \prod_{j=1}^NiG(x_j,t_j;x_{j-1},t_{j-1})dx_1dx_2\cdots dx_N\ \cdots(1)\\\\
-$\xlongequal[H=\frac{p^2}{2m},N\rightarrow \infty]{Free\ Particle}(\frac{m}{2\pi i\Delta t})^{\frac{N}{2}}\int \prod_{j=1}^Ne^{i\frac{m}{2}(\frac{x_j-x_{j-1}}{\Delta t})^2\Delta t}dx_1dx_2\cdots dx_N\ \cdots(2)\\\\
-$=\sqrt{\frac{m}{2\pi i(t_b-t_a)}}e^{i\frac{m}{2N}\frac{(x_b-x_a)^2}{t_b-t_a}}\ \cdots(3)
+&\cdots iG(x_1,t_1;x_a,t_a)dx_1dx_2\cdots dx_N\\\\
+&\xlongequal[x_a=x_0]{x_b=x_N} \int \prod_{j=1}^NiG(x_j,t_j;x_{j-1},t_{j-1})dx_1dx_2\cdots dx_N\ \cdots(1)\\\\
+&\xlongequal[H=\frac{p^2}{2m},N\rightarrow \infty]{Free\ Particle}(\frac{m}{2\pi i\Delta t})^{\frac{N}{2}}\int \prod_{j=1}^Ne^{i\frac{m}{2}(\frac{x_j-x_{j-1}}{\Delta t})^2\Delta t}dx_1dx_2\cdots dx_N\ \cdots(2)\\\\
+&=\sqrt{\frac{m}{2\pi i(t_b-t_a)}}e^{i\frac{m}{2N}\frac{(x_b-x_a)^2}{t_b-t_a}}\ \cdots(3)
 \end{split}
 \end{equation}
 $$
