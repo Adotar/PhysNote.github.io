@@ -71,7 +71,8 @@ With the subscript means the path .
 Meanwhile , there is not only one path the particle can choose . So , the real probability of it traveling from $(x_a,t_a)$ to $(x_b,t_b)$ need to consider all of the paths , which means we have to do an integral :
 
 <p style="text-align:center">\(
-iG(x_b,t_b;x_a,t_a)=P_{x_a\rightarrow x_b}=\int P_{x_a\rightarrow x\rightarrow x_b}dx=\int P_{x_a\rightarrow x}\times P_{x\rightarrow x_b}dx=\int iG(x_b,t_b;x,t)\cdot iG(x,t;x_a,t_a)dx
+iG(x_b,t_b;x_a,t_a)&=P_{x_a\rightarrow x_b}=\int P_{x_a\rightarrow x\rightarrow x_b}dx=\int P_{x_a\rightarrow x}\times P_{x\rightarrow x_b}dx\\\\
+=\int iG(x_b,t_b;x,t)\cdot iG(x,t;x_a,t_a)dx
 \)</p>
 
 This is the core idea of the path integral .
@@ -86,14 +87,10 @@ There are 3 mean steps when we express the propagator in path integral represent
 
 (3) Express the propagator in the form of action quantity
 
-$$
-\begin{equation}
-\begin{split}
+<p style="text-align:center">\(
 iG(x_b,t_b;x_a,t_a)=\int iG(x_b,t_b;x_{N-1},t_{N-1})\cdot iG(x_{N-1},t_{N-1};x_{N-2},t_{N-2})\\\\
-&\cdots iG(x_1,t_1;x_a,t_a)dx_1dx_2\cdots dx_N\\\\
-&\xlongequal[x_a=x_0]{x_b=x_N} \int \prod_{j=1}^NiG(x_j,t_j;x_{j-1},t_{j-1})dx_1dx_2\cdots dx_N\ \cdots(1)\\\\
-&\xlongequal[H=\frac{p^2}{2m},N\rightarrow \infty]{Free\ Particle}(\frac{m}{2\pi i\Delta t})^{\frac{N}{2}}\int \prod_{j=1}^Ne^{i\frac{m}{2}(\frac{x_j-x_{j-1}}{\Delta t})^2\Delta t}dx_1dx_2\cdots dx_N\ \cdots(2)\\\\
-&=\sqrt{\frac{m}{2\pi i(t_b-t_a)}}e^{i\frac{m}{2N}\frac{(x_b-x_a)^2}{t_b-t_a}}\ \cdots(3)
-\end{split}
-\end{equation}
-$$
+\cdots iG(x_1,t_1;x_a,t_a)dx_1dx_2\cdots dx_N\\\\
+\xlongequal[x_a=x_0]{x_b=x_N} \int \prod_{j=1}^NiG(x_j,t_j;x_{j-1},t_{j-1})dx_1dx_2\cdots dx_N\ \cdots(1)\\\\
+\xlongequal[H=\frac{p^2}{2m},N\rightarrow \infty]{Free\ Particle}(\frac{m}{2\pi i\Delta t})^{\frac{N}{2}}\int \prod_{j=1}^Ne^{i\frac{m}{2}(\frac{x_j-x_{j-1}}{\Delta t})^2\Delta t}dx_1dx_2\cdots dx_N\ \cdots(2)\\\\
+=\sqrt{\frac{m}{2\pi i(t_b-t_a)}}e^{i\frac{m}{2N}\frac{(x_b-x_a)^2}{t_b-t_a}}\ \cdots(3)
+\)</p>
