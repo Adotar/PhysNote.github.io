@@ -107,7 +107,7 @@ To get the expression (1), we should use the Taylor expansion:
 \lim_{x\rightarrow0}e^x=\lim_{x\rightarrow0}\sum_{n=0}^{\infty}\frac{x^n}{n!}\approx1+x
 \)</p>
 
-In the expression of the propagator from the boson coherent state $|\alpha_{j-1}\rangle$ to $|\alpha_j\rangle$ , the variable $L$ and the parameter $A$:
+In the expression of the propagator, the variable $L$ and the parameter $A$:
 
 <p style="text-align:center">\(
 \begin{aligned}
@@ -115,6 +115,8 @@ L&=-\frac{i}{2\Delta t}(-\alpha_j\alpha_j^*-\alpha_{j-1}\alpha_{j-1}^*+2\alpha_j
 &=\frac{i}{2}[\alpha^*(t)\dot{\alpha}(t)-\dot{\alpha}^*(t)\alpha(t)]-\hbar\omega\alpha^*(t)\alpha(t)\ ;
 \end{aligned}
 \)</p>
+
+And
 
 <p style="text-align:center">\(
 A=e^{-\frac{i\hbar\omega\Delta t}{2}}
