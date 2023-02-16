@@ -87,16 +87,16 @@ According to the conclusion of [the last note about path integral](https://adota
 
 <p align="left">\(
 \begin{aligned}
-iG(\alpha_b,t_b;\alpha_a,t_a)&=\frac{1}{\pi^{N-1}}\int\prod_{j=1}^NiG(\alpha_j,t_j;\alpha_{j-1},t_{j-1})d\alpha_1d\alpha_2\cdots d\alpha_{N-1} \\
-\Rightarrow iG(\alpha_j,t_j;\alpha_{j-1},t_{j-1})&=\langle \alpha_j|\hat{U}(t_j,t_{j-1})|\alpha_{j-1}\rangle \\
+&iG(\alpha_b,t_b;\alpha_a,t_a)=\frac{1}{\pi^{N-1}}\int\prod_{j=1}^NiG(\alpha_j,t_j;\alpha_{j-1},t_{j-1})d\alpha_1d\alpha_2\cdots d\alpha_{N-1} \\
+&\Rightarrow iG(\alpha_j,t_j;\alpha_{j-1},t_{j-1})=\langle \alpha_j|\hat{U}(t_j,t_{j-1})|\alpha_{j-1}\rangle \\
 &=\langle\alpha_j|e^{-i\hat{H}\Delta t}|\alpha_{j-1}\rangle,\ \Delta t=t_j-t_{j-1}=\frac{t_b-t_a}{N}\rightarrow0 \\
 &\xlongequal[\lim_{x\rightarrow0}e^x=\lim_{x\rightarrow0}\sum_{n=0}^{\infty}\frac{x^n}{n!}\approx1+x]{Utilizing\ Talor\ Expansion}[1-i\hbar\omega\Delta t(\alpha_j^*\alpha_{j-1}+\frac{1}{2})]\langle\alpha_j|\alpha_{j-1}\rangle \\
 &=e^{i\Delta t[-\frac{i}{2\Delta t}(-\alpha_j\alpha_j^*-\alpha_{j-1}\alpha_{j-1}^*+2\alpha_j^*\alpha_{j-1})-\hbar\omega\alpha_j^*\alpha_{j-1}]}e^{-\frac{i\hbar\omega\Delta t}{2}} \\
 &=Ae^{i\Delta tL} \\
-with\ \ \ \ L&=-\frac{i}{2\Delta t}(-\alpha_j\alpha_j^*-\alpha_{j-1}\alpha_{j-1}^*+2\alpha_j^*\alpha_{j-1})-\hbar\omega\alpha_j^*\alpha_{j-1} \\
+&with\ \ \ \ L=-\frac{i}{2\Delta t}(-\alpha_j\alpha_j^*-\alpha_{j-1}\alpha_{j-1}^*+2\alpha_j^*\alpha_{j-1})-\hbar\omega\alpha_j^*\alpha_{j-1} \\
 &=\frac{i}{2}[\alpha^*(t)\dot{\alpha}(t)-\dot{\alpha}^*(t)\alpha(t)]-\hbar\omega\alpha^*(t)\alpha(t) \\
-and\ \ \ \ A&=e^{-\frac{i\hbar\omega\Delta t}{2}} \\
-\Rightarrow iG(\alpha_b,t_b;\alpha_a,t_a)&=(\frac{A}{\pi})^{N-1}\int e^{\int_{t_a}^{t_b}L(\alpha,\alpha^*,t)dt}d\alpha_1d\alpha_2\cdots d\alpha_{N-1}
+&and\ \ \ \ A=e^{-\frac{i\hbar\omega\Delta t}{2}} \\
+&\Rightarrow iG(\alpha_b,t_b;\alpha_a,t_a)=(\frac{A}{\pi})^{N-1}\int e^{\int_{t_a}^{t_b}L(\alpha,\alpha^*,t)dt}d\alpha_1d\alpha_2\cdots d\alpha_{N-1}
 \end{aligned}
 \)</p>
 
