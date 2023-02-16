@@ -86,7 +86,7 @@ So we can consider that the space stretched out by boson coherent state is overc
 According to the conclusion of [the last note about path integral](https://adotar.github.io/PhysNote.github.io/QFT-propagator&path-integral.html) and the overcompleteness of boson coherent state, it's easy to compute the propagator of bosons:
 
 <p style="text-align:center">\(
-iG(\alpha_b,t_b;\alpha_a,t_a)&=\frac{1}{\pi^{N-1}}\int\prod_{j=1}^NiG(\alpha_j,t_j;\alpha_{j-1},t_{j-1})d\alpha_1d\alpha_2\cdots d\alpha_{N-1}
+iG(\alpha_b,t_b;\alpha_a,t_a)=\frac{1}{\pi^{N-1}}\int\prod_{j=1}^NiG(\alpha_j,t_j;\alpha_{j-1},t_{j-1})d\alpha_1d\alpha_2\cdots d\alpha_{N-1}
 \)</p>
 
 With
@@ -107,12 +107,12 @@ To get the expression (1), we should use the Taylor expansion:
 \lim_{x\rightarrow0}e^x=\lim_{x\rightarrow0}\sum_{n=0}^{\infty}\frac{x^n}{n!}\approx1+x
 \)</p>
 
-In the expression of the propagator from the boson coherent state $\ket{\alpha_{j-1}}$ to $\ket{\alpha_j}$ , the variable $L$ and the parameter $A$:
+In the expression of the propagator from the boson coherent state $|\alpha_{j-1}\rangle$ to $|\alpha_j\rangle$ , the variable $L$ and the parameter $A$:
 
 <p style="text-align:center">\(
 \begin{aligned}
 L&=-\frac{i}{2\Delta t}(-\alpha_j\alpha_j^*-\alpha_{j-1}\alpha_{j-1}^*+2\alpha_j^*\alpha_{j-1})-\hbar\omega\alpha_j^*\alpha_{j-1} \\\\
-&=\frac{i}{2}[\alpha^*(t)\dot{\alpha}(t)-\dot{\alpha}^*(t)\alpha(t)]-\hbar\omega\alpha^*(t)\alpha(t)
+&=\frac{i}{2}[\alpha^*(t)\dot{\alpha}(t)-\dot{\alpha}^*(t)\alpha(t)]-\hbar\omega\alpha^*(t)\alpha(t)\ ;
 \end{aligned}
 \)</p>
 
