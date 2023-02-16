@@ -42,7 +42,7 @@ Utilizing the definition of boson coherent state, it is easy to compute the over
 <p style="text-align:center">\(
 \begin{aligned}
 \langle \alpha|\beta \rangle
-&=e^{-\frac{|\alpha|^2}{2}}\sum_{m=0}^{\infty}\frac{\alpha^m}{\sqrt{m!}}\langle m|\cdot e^{-\frac{|\beta|^2}{2}}\sum_{n=0}^{\infty}\frac{\beta^n}{\sqrt{n!}}|n \rangle \\
+&=e^{-\frac{|\alpha|^2}{2}}\sum_{m=0}^{\infty}\frac{\alpha^m}{\sqrt{m!}}\langle m|\cdot e^{-\frac{|\beta|^2}{2}}\sum_{n=0}^{\infty}\frac{\beta^n}{\sqrt{n!}}|n \rangle \\\\
 &=e^{-\frac{|\alpha|^2+|\beta |^2}{2}+\alpha^*\beta }
 \end{aligned}
 \)</p>
@@ -70,11 +70,11 @@ so:
 <p style="text-align:center">\(
 \begin{aligned}
 \langle n|1|m\rangle
-&=\int f(\alpha) \langle n|e^{-\frac{|\alpha|^2}{2}}\sum_{n'=0}^{\infty}\frac{\alpha^{n'}}{\sqrt{n'!}}|n' \rangle\cdot e^{-\frac{|\alpha|^2}{2}}\sum_{m'=0}^{\infty}\frac{\alpha^{m'}}{\sqrt{m'!}}|m' \rangle d\alpha \\
-&=2a\delta_{mn}\int_0^{\infty}\frac{e^{-r^2}r^{2n+1}}{n!}dr \\
-&=\pi a\delta_{mn} \\
-&=\delta_{mn} \\
-&\Rightarrow a=\frac{1}{\pi} \\
+&=\int f(\alpha) \langle n|e^{-\frac{|\alpha|^2}{2}}\sum_{n'=0}^{\infty}\frac{\alpha^{n'}}{\sqrt{n'!}}|n' \rangle\cdot e^{-\frac{|\alpha|^2}{2}}\sum_{m'=0}^{\infty}\frac{\alpha^{m'}}{\sqrt{m'!}}|m' \rangle d\alpha \\\\
+&=2a\delta_{mn}\int_0^{\infty}\frac{e^{-r^2}r^{2n+1}}{n!}dr \\\\
+&=\pi a\delta_{mn} \\\\
+&=\delta_{mn} \\\\
+&\Rightarrow a=\frac{1}{\pi} \\\\
 &\Rightarrow 1=\frac{1}{\pi}\int |\alpha\rangle\langle\alpha|d\alpha
 \end{aligned}
 \)</p>
@@ -93,10 +93,10 @@ With
 
 <p style="text-align:center">\(
 \begin{aligned}
-iG(\alpha_j,t_j;\alpha_{j-1},t_{j-1})&=\langle \alpha_j|\hat{U}(t_j,t_{j-1})|\alpha_{j-1}\rangle \\
-&=\langle\alpha_j|e^{-i\hat{H}\Delta t}|\alpha_{j-1}\rangle,\ \Delta t=t_j-t_{j-1}=\frac{t_b-t_a}{N}\rightarrow0 \\
-&=[1-i\hbar\omega\Delta t(\alpha_j^*\alpha_{j-1}+\frac{1}{2})]\langle\alpha_j|\alpha_{j-1}\rangle \cdots (1) \\
-&=e^{i\Delta t[-\frac{i}{2\Delta t}(-\alpha_j\alpha_j^*-\alpha_{j-1}\alpha_{j-1}^*+2\alpha_j^*\alpha_{j-1})-\hbar\omega\alpha_j^*\alpha_{j-1}]}e^{-\frac{i\hbar\omega\Delta t}{2}} \\
+iG(\alpha_j,t_j;\alpha_{j-1},t_{j-1})&=\langle \alpha_j|\hat{U}(t_j,t_{j-1})|\alpha_{j-1}\rangle \\\\
+&=\langle\alpha_j|e^{-i\hat{H}\Delta t}|\alpha_{j-1}\rangle,\ \Delta t=t_j-t_{j-1}=\frac{t_b-t_a}{N}\rightarrow0 \\\\
+&=[1-i\hbar\omega\Delta t(\alpha_j^*\alpha_{j-1}+\frac{1}{2})]\langle\alpha_j|\alpha_{j-1}\rangle \cdots (1) \\\\
+&=e^{i\Delta t[-\frac{i}{2\Delta t}(-\alpha_j\alpha_j^*-\alpha_{j-1}\alpha_{j-1}^*+2\alpha_j^*\alpha_{j-1})-\hbar\omega\alpha_j^*\alpha_{j-1}]}e^{-\frac{i\hbar\omega\Delta t}{2}} \\\\
 &=Ae^{i\Delta tL}
 \end{aligned}
 \)</p>
@@ -111,7 +111,7 @@ In the expression of the propagator from the boson coherent state $\ket{\alpha_{
 
 <p style="text-align:center">\(
 \begin{aligned}
-L&=-\frac{i}{2\Delta t}(-\alpha_j\alpha_j^*-\alpha_{j-1}\alpha_{j-1}^*+2\alpha_j^*\alpha_{j-1})-\hbar\omega\alpha_j^*\alpha_{j-1} \\
+L&=-\frac{i}{2\Delta t}(-\alpha_j\alpha_j^*-\alpha_{j-1}\alpha_{j-1}^*+2\alpha_j^*\alpha_{j-1})-\hbar\omega\alpha_j^*\alpha_{j-1} \\\\
 &=\frac{i}{2}[\alpha^*(t)\dot{\alpha}(t)-\dot{\alpha}^*(t)\alpha(t)]-\hbar\omega\alpha^*(t)\alpha(t)
 \end{aligned}
 \)</p>
