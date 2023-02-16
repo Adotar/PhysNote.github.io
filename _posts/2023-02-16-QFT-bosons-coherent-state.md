@@ -85,7 +85,7 @@ So we can consider that the space stretched out by boson coherent state is overc
 
 According to the conclusion of [the last note about path integral](https://adotar.github.io/PhysNote.github.io/QFT-propagator&path-integral.html) and the overcompleteness of boson coherent state, it's easy to compute the propagator of bosons:
 
-<p style="text-align:center">\(
+<p align="left">\(
 \begin{aligned}
 iG(\alpha_b,t_b;\alpha_a,t_a)&=\frac{1}{\pi^{N-1}}\int\prod_{j=1}^NiG(\alpha_j,t_j;\alpha_{j-1},t_{j-1})d\alpha_1d\alpha_2\cdots d\alpha_{N-1} \\
 \Rightarrow iG(\alpha_j,t_j;\alpha_{j-1},t_{j-1})&=\langle \alpha_j|\hat{U}(t_j,t_{j-1})|\alpha_{j-1}\rangle \\
