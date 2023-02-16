@@ -23,10 +23,16 @@ Boson coherent state is the eigenstate of boson annihilation operator:
 \hat{a}|\alpha \rangle=\alpha|\alpha \rangle
 \)</p>
 
-Utilizing $\langle \alpha|\alpha \rangle=1$ , we can get:
+Utilizing:
 
 <p style="text-align:center">\(
-|\alpha \rangle=e^{-\frac{|\alpha|^2}{2}}\sum_{n=0}^{\infin}\frac{\alpha^n}{\sqrt{n!}}|n \rangle
+\langle \alpha|\alpha \rangle=1
+\)</p>
+
+we can get:
+
+<p style="text-align:center">\(
+|\alpha \rangle=e^{-\frac{|\alpha|^2}{2}}\sum_{n=0}^{\infty}\frac{\alpha^n}{\sqrt{n!}}|n \rangle
 \)</p>
 
 ## 2. Overlap, Overcompleteness
@@ -36,7 +42,7 @@ Utilizing the definition of boson coherent state, it is easy to compute the over
 <p style="text-align:center">\(
 \begin{aligned}
 \langle \alpha|\beta \rangle
-&=e^{-\frac{|\alpha|^2}{2}}\sum_{m=0}^{\infin}\frac{\alpha^m}{\sqrt{m!}}\langle m|\cdot e^{-\frac{|\beta|^2}{2}}\sum_{n=0}^{\infin}\frac{\beta^n}{\sqrt{n!}}|n \rangle \\
+&=e^{-\frac{|\alpha|^2}{2}}\sum_{m=0}^{\infty}\frac{\alpha^m}{\sqrt{m!}}\langle m|\cdot e^{-\frac{|\beta|^2}{2}}\sum_{n=0}^{\infty}\frac{\beta^n}{\sqrt{n!}}|n \rangle \\
 &=e^{-\frac{|\alpha|^2+|\beta |^2}{2}+\alpha^*\beta }
 \end{aligned}
 \)</p>
@@ -47,13 +53,25 @@ To prove the overcompleteness of this space of state, we ansatz a normalized fun
 \int f(\alpha)|\alpha \rangle \langle \alpha|d\alpha=1
 \)</p>
 
-Utilizing $\langle n|1|m\rangle =\delta_{mn}=\int f(\alpha)\langle n|\alpha\rangle\langle\alpha|m\rangle d\alpha$ , and we asumme that $f(\alpha)=f(|\alpha|)=f(|r\cos{\psi}+ir\sin{\psi}|)=f(r)=a$ , so:
+Utilizing:
+
+<p style="text-align:center">\(
+\langle n|1|m\rangle =\delta_{mn}=\int f(\alpha)\langle n|\alpha\rangle\langle\alpha|m\rangle d\alpha
+\)</p>
+
+and we asumme that
+
+<p style="text-align:center">\(
+f(\alpha)=f(|\alpha|)=f(|r\cos{\psi}+ir\sin{\psi}|)=f(r)=a
+\)</p>
+
+so:
 
 <p style="text-align:center">\(
 \begin{aligned}
 \langle n|1|m\rangle
-&=\int f(\alpha) \langle n|e^{-\frac{|\alpha|^2}{2}}\sum_{n'=0}^{\infin}\frac{\alpha^{n'}}{\sqrt{n'!}}|n' \rangle\cdot e^{-\frac{|\alpha|^2}{2}}\sum_{m'=0}^{\infin}\frac{\alpha^{m'}}{\sqrt{m'!}}|m' \rangle d\alpha \\
-&=2a\delta_{mn}\int_0^{\infin}\frac{e^{-r^2}r^{2n+1}}{n!}dr \\
+&=\int f(\alpha) \langle n|e^{-\frac{|\alpha|^2}{2}}\sum_{n'=0}^{\infty}\frac{\alpha^{n'}}{\sqrt{n'!}}|n' \rangle\cdot e^{-\frac{|\alpha|^2}{2}}\sum_{m'=0}^{\infty}\frac{\alpha^{m'}}{\sqrt{m'!}}|m' \rangle d\alpha \\
+&=2a\delta_{mn}\int_0^{\infty}\frac{e^{-r^2}r^{2n+1}}{n!}dr \\
 &=\pi a\delta_{mn} \\
 &=\delta_{mn} \\
 &\Rightarrow a=\frac{1}{\pi} \\
@@ -72,7 +90,7 @@ According to the conclusion of [the last note about path integral](https://adota
 iG(\alpha_b,t_b;\alpha_a,t_a)&=\frac{1}{\pi^{N-1}}\int\prod_{j=1}^NiG(\alpha_j,t_j;\alpha_{j-1},t_{j-1})d\alpha_1d\alpha_2\cdots d\alpha_{N-1} \\
 \Rightarrow iG(\alpha_j,t_j;\alpha_{j-1},t_{j-1})&=\langle \alpha_j|\hat{U}(t_j,t_{j-1})|\alpha_{j-1}\rangle \\
 &=\langle\alpha_j|e^{-i\hat{H}\Delta t}|\alpha_{j-1}\rangle,\ \Delta t=t_j-t_{j-1}=\frac{t_b-t_a}{N}\rightarrow0 \\
-&\xlongequal[\lim_{x\rightarrow0}e^x=\lim_{x\rightarrow0}\sum_{n=0}^{\infin}\frac{x^n}{n!}\approx1+x]{Utilizing\ Talor\ Expansion}[1-i\hbar\omega\Delta t(\alpha_j^*\alpha_{j-1}+\frac{1}{2})]\langle\alpha_j|\alpha_{j-1}\rangle \\
+&\xlongequal[\lim_{x\rightarrow0}e^x=\lim_{x\rightarrow0}\sum_{n=0}^{\infty}\frac{x^n}{n!}\approx1+x]{Utilizing\ Talor\ Expansion}[1-i\hbar\omega\Delta t(\alpha_j^*\alpha_{j-1}+\frac{1}{2})]\langle\alpha_j|\alpha_{j-1}\rangle \\
 &=e^{i\Delta t[-\frac{i}{2\Delta t}(-\alpha_j\alpha_j^*-\alpha_{j-1}\alpha_{j-1}^*+2\alpha_j^*\alpha_{j-1})-\hbar\omega\alpha_j^*\alpha_{j-1}]}e^{-\frac{i\hbar\omega\Delta t}{2}} \\
 &=Ae^{i\Delta tL} \\
 with\ \ \ \ L&=-\frac{i}{2\Delta t}(-\alpha_j\alpha_j^*-\alpha_{j-1}\alpha_{j-1}^*+2\alpha_j^*\alpha_{j-1})-\hbar\omega\alpha_j^*\alpha_{j-1} \\

@@ -26,7 +26,7 @@ G(x,t;x',t')=-i\langle x|U(t,t')|x'\rangle =-i\delta_{x,x'}=-i\sqrt{\frac{m}{2\p
 \Delta t=t-t'
 \)</p>
 
-with $U(t,t')=e^{-iH(t-t')}$ is the time evolution operator in real-space. The third equation is true only when we are considering free particle ( $H=\frac{p^2}{2m}$) in real-space representation.
+with $U(t,t')=e^{-iH(t-t')}$ is the time evolution operator in real-space. The third equation is true only when we are considering free particle ($H=\frac{p^2}{2m}$) in real-space representation.
 
 ## 2. Energy / frequency representation
 
