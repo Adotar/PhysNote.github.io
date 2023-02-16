@@ -4,7 +4,7 @@ read_time: true
 show_date: true
 title: "QFT in Condensed Matter Physics (2)"
 date: 2023-02-16
-img: posts/20230208/richardfeynman.jpg
+img: posts/20230216/Feynman.jpg
 tags: [凝聚态物理, QFT, propagator, path integral, boson, coherent state]
 category: opinion
 author: Adotar
