@@ -164,13 +164,13 @@ Wick theorem is a method to reduce the complexity when we are solving a combinat
 The theorem says that all of the time ordered product can be expanded by the normal ordered product. It can be written as:
 
 <p style="text-align:center">\(
-\Tau\prod_{i=1}^m\hat{A}_i=:\Tau\prod_{i=1}^m\hat{A}_i:+\sum_{\alpha,\beta}\overline{\hat{A}_{\alpha}\hat{A}_{\beta}}:\Tau\prod_{i\neq\alpha,\beta}\hat{A}_i:+\sum_{\alpha,\beta;\gamma,\delta}\overline{\hat{A}_{\alpha}\hat{A}_{\beta}}\ \overline{\hat{A}_{\gamma}\hat{A}_{\delta}}:\Tau\sum_{\alpha,\beta;\gamma,\delta}\hat{A}_i:+\cdots
+T\prod_{i=1}^m\hat{A}_i=:T\prod_{i=1}^m\hat{A}_i:+\sum_{\alpha,\beta}\overline{\hat{A}_{\alpha}\hat{A}_{\beta}}:T\prod_{i\neq\alpha,\beta}\hat{A}_i:+\sum_{\alpha,\beta;\gamma,\delta}\overline{\hat{A}_{\alpha}\hat{A}_{\beta}}\ \overline{\hat{A}_{\gamma}\hat{A}_{\delta}}:T\sum_{\alpha,\beta;\gamma,\delta}\hat{A}_i:+\cdots
 \)</p>
 
-with $\Tau$ is the time ordering operator, which can arrange the operators in chronological order (each time the order of the creation or annihilation operators of fermion are changed, put a minus in the front). And $:ABC:$ is the normal order of operators, which arrange the operators in the order that all creation operators precede and annihilation operators come after (remember the minus). And $\overline{ABC}$ is the contraction over $\Tau(ABC)$:
+with $T$ is the time ordering operator, which can arrange the operators in chronological order (each time the order of the creation or annihilation operators of fermion are changed, put a minus in the front). And $:ABC:$ is the normal order of operators, which arrange the operators in the order that all creation operators precede and annihilation operators come after (remember the minus). And $\overline{ABC}$ is the contraction over $\Tau(ABC)$:
 
 <p style="text-align:center">\(
-\overline{ABC}=\Tau(ABC)-:ABC:
+\overline{ABC}=T(ABC)-:ABC:
 \)</p>
 
 
