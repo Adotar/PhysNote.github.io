@@ -4,7 +4,7 @@ read_time: true
 show_date: true
 title: "QFT in Condensed Matter Physics (3)"
 date: 2023-03-03
-img: posts/20230216/Feynman.jpg
+img: posts/20230303/levLandau.jpeg
 tags: [凝聚态物理, QFT, path integral, fermion, coherent state, wick theorem, Grassmann variable]
 category: opinion
 author: Adotar
@@ -118,7 +118,7 @@ And do the path integration:
 
 <p style="text-align:center">\(
 \begin{aligned}
-\langle\psi_f,t_f|\hat{U}(t_f,t_i)|\psi_i,t_i\rangle&=\langle\psi_f|e^{-\frac{i}{\hbar}\hat{H}(t_f-t_i)}|\psi_i\rangle \\\\
+&\langle\psi_f,t_f|\hat{U}(t_f,t_i)|\psi_i,t_i\rangle=\langle\psi_f|e^{-\frac{i}{\hbar}\hat{H}(t_f-t_i)}|\psi_i\rangle \\\\
 &=\lim_{M\rightarrow\infty}\int\prod_{k=1}^{M-1}\prod_{\alpha}d\bar{\xi}_{\alpha k}d\xi_{\alpha k}\exp[-\sum_{\alpha}\bar{\xi}_{\alpha k}\dot{\xi}_{\alpha k}\Delta t-\frac{i}{\hbar}\Delta t\hat{H}(\bar{\xi}_k,\xi_{k-1})] \\\\
 &=\int D[\bar{\xi},\xi]e^{\frac{i}{\hbar}S(\bar{\xi},\xi)}
 \end{aligned}
@@ -128,8 +128,7 @@ with
 
 <p style="text-align:center">\(
 S(\bar{\xi},\xi)=\int_{t_i}^{t_f}dt[i\hbar\bar{\xi}\dot{\xi}-H(\bar{\xi,\xi})]
-$$
-
+\)</p>
 
 <p style="text-align:center">\(
 \int D[\bar{\xi},\xi]=\lim_{M\rightarrow\infty}\int\prod_{k=1}^{M-1}\prod_{\alpha}d\bar{\xi}_{\alpha k}d\xi_{\alpha k}
@@ -164,10 +163,13 @@ Wick theorem is a method to reduce the complexity when we are solving a combinat
 The theorem says that all of the time ordered product can be expanded by the normal ordered product. It can be written as:
 
 <p style="text-align:center">\(
-T\prod_{i=1}^m\hat{A}_i=:T\prod_{i=1}^m\hat{A}_i:+\sum_{\alpha,\beta}\overline{\hat{A}_{\alpha}\hat{A}_{\beta}}:T\prod_{i\neq\alpha,\beta}\hat{A}_i:+\sum_{\alpha,\beta;\gamma,\delta}\overline{\hat{A}_{\alpha}\hat{A}_{\beta}}\ \overline{\hat{A}_{\gamma}\hat{A}_{\delta}}:T\sum_{\alpha,\beta;\gamma,\delta}\hat{A}_i:+\cdots
+\begin{aligned}
+T\prod_{i=1}^m\hat{A}_i&=:T\prod_{i=1}^m\hat{A}_i:+\sum_{\alpha,\beta}\overline{\hat{A}_{\alpha}\hat{A}_{\beta}}:T\prod_{i\neq\alpha,\beta}\hat{A}_i: \\\\
+&+\sum_{\alpha,\beta;\gamma,\delta}\overline{\hat{A}_{\alpha}\hat{A}_{\beta}}\ \overline{\hat{A}_{\gamma}\hat{A}_{\delta}}:T\sum_{\alpha,\beta;\gamma,\delta}\hat{A}_i:+\cdots
+\end{aligned}
 \)</p>
 
-with $T$ is the time ordering operator, which can arrange the operators in chronological order (each time the order of the creation or annihilation operators of fermion are changed, put a minus in the front). And $:ABC:$ is the normal order of operators, which arrange the operators in the order that all creation operators precede and annihilation operators come after (remember the minus). And $\overline{ABC}$ is the contraction over $\Tau(ABC)$:
+with $T$ is the time ordering operator, which can arrange the operators in chronological order (each time the order of the creation or annihilation operators of fermion are changed, put a minus in the front). And $:ABC:$ is the normal order of operators, which arrange the operators in the order that all creation operators precede and annihilation operators come after (remember the minus). And $\overline{ABC}$ is the contraction over $T(ABC)$:
 
 <p style="text-align:center">\(
 \overline{ABC}=T(ABC)-:ABC:
