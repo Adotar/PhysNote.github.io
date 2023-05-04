@@ -13,6 +13,8 @@ description: "A note about my first research program"
 ---
 # 1. Mean Field Approximation
 
+This whole artical is a note about reproduction of the paper [Spin and charge modulations of a half-filled extended Hubbard model](https://link.aps.org/doi/10.1103/PhysRevB.106.235131).
+
 ## 1.1. Nearly Free Electron Approximation
 
 In almost all of the text book about solid physics , there is always one section about the nearly free electron approximation . It is the first time when the students of physics getting to learn about one of the method of perturbation , which seems to create a mean field . It just has done one thing to the potential field in cristal , which is changing $V(x)$ into $\bar{V}+\Delta V$ , where $\Delta V=V(x)-\bar{V}$ , $\bar{V}$ is the **'mean field'** . Using the perturbation theory in quantum mechanics , we can easily do an approximate interpretation about the energy band structure in cristal . **[For further details .](https://solidstate.quantumtinkerer.tudelft.nl/11_nearly_free_electron_model/)**
